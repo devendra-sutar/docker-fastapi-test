@@ -19,3 +19,8 @@ Stores user data in a JSON file (`data/users.json`). No database required.
     docker-compose up --build -d
 3.  Check containers status
     docker ps
+4.  Create a user
+   curl -X POST "http://localhost:8000/users" \
+    -H "Content-Type: application/json" \
+    -d '{"id": 1, "name": "John Doe", "username": "john_doe", "email": "john.doe@example.com"}'
+
