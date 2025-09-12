@@ -6,7 +6,7 @@ app = FastAPI()
 
 @app.get("/")
 def read_root():
-    return {"message": "Hello, RUTU "}
+    return {"message": "Hello"}
 
 @app.get("/users")
 async def get_users_endpoint():
