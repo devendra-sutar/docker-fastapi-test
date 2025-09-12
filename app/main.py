@@ -1,15 +1,15 @@
 from fastapi import FastAPI
-from .services import get_users, create_user
-from .schema import User
+from app.services import get_users, create_user
+from app.schema import User
 
 app = FastAPI()
 
 @app.get("/")
 def read_root():
-    return {"message": "Hello, Docker FastAPI!"}
+    return {"message": "Hello, RUTU "}
 
 @app.get("/users")
-def read_users():
+async def get_users_endpoint():
     return get_users()
 
 @app.post("/users")
