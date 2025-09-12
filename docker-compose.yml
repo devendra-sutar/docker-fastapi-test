@@ -3,16 +3,9 @@ version: '3.8'
 services:
   web:
     build: .
-    container_name: fastapi_app
     ports:
       - "8000:8000"
     volumes:
-      - ./app:/app
+      - .:/app
     environment:
-      - PYTHONUNBUFFERED=1
-    networks:
-      - app_network
-
-networks:
-  app_network:
-    driver: bridge
+      - PYTHONPATH=/app
